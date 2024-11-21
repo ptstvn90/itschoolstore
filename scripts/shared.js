@@ -142,6 +142,17 @@ const buildShoppingCart = () => {
   );
 
   buildTotal(productsByCount);
+
+  const confirmPurchaseBtn = document.createElement("button");
+  confirmPurchaseBtn.textContent = "Confirm Purchase";
+  confirmPurchaseBtn.setAttribute("class", "btn btn-secondary mt-3 w-100");
+
+  confirmPurchaseBtn.addEventListener("click", () => {
+  localStorage.removeItem("shoppingCartList");
+  window.location.href = "products_purchased.html";
+});
+
+  cartBodyEl.appendChild(confirmPurchaseBtn);
 };
 
 logoutIconEl.addEventListener("click", logout);

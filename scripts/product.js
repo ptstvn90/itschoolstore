@@ -31,24 +31,48 @@ const generateProductContent = ({
   const contentEl = document.querySelector(".product-details");
   const stars = generateRateStars(rating.rate);
 
-  contentEl.innerHTML = `<div class="d-flex gap-5">
-  <img src="${image}" class="img-fluid w-50" alt="...">
-  <div class="d-flex flex-column flex-1 gap-3 mt-5">
+  contentEl.innerHTML = `
+<div class="row align-items-start gy-4">
+  <div class="col-12 col-md-6 text-center">
+    <img src="${image}" class="img-fluid rounded" alt="${title}">
+  </div>
+  <div class="col-12 col-md-6 d-flex flex-column gap-3">
     <div>
-      <h2 class="h2 m-0">${title}</h2>
-      <small class="text-body-secondary">${category}</small>
+      <h2 class="h2">${title}</h2>
+      <small class="text-muted">${category}</small>
     </div>
     <p>${description}</p>
-    <div class="d-flex justify-space-between">
-      <span class="badge text-bg-primary fs-4">$${price}</span>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="badge bg-primary fs-4">$${price}</span>
     </div>
-    
-    <div class="d-flex gap-3 align-items-center">${stars}
-      <span class="fs-4">${rating.rate}/${rating.count}</span>
+    <div class="d-flex align-items-center gap-2">
+      ${stars}
+      <span class="fs-5">${rating.rate} / ${rating.count}</span>
+    </div>
+    <div>
+      <button 
+        class="btn btn-secondary add-to-cart-btn w-100" 
+        data-id="${title}" 
+        data-title="${title}" 
+        data-price="${price}" 
+        data-image="${image}">
+        Add to Cart
+      </button>
     </div>
   </div>
-
 </div>`;
+
+  const addToCartBtn = contentEl.querySelector(".add-to-cart-btn");
+
+  addToCartBtn.addEventListener("click", () => {
+  const product = {
+    id: addToCartBtn.getAttribute("data-id"),
+    title: addToCartBtn.getAttribute("data-title"),
+    price: parseFloat(addToCartBtn.getAttribute("data-price")),
+    image: addToCartBtn.getAttribute("data-image"),
+  };
+  addToCart(product);
+});
 };
 
 const fetchProduct = async () => {
