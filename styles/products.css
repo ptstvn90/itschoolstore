@@ -1,0 +1,34 @@
+.main-content #products-title {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.main-content .products {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.main-content .products .product-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  min-width: 250px;
+  padding: 40px 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-content .products .product-card:hover {
+  background-color: var(--lighter-blue);
+}
+
+.main-content .products .product-card .card-image {
+  height: 100px;
+  width: max-content;
+}

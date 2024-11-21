@@ -1,0 +1,142 @@
+head,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Asap, sans-serif;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.max-content-width {
+  max-width: min(1200px, 100vw);
+  margin: 0 auto;
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+}
+
+.header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header-container .navigation ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0;
+}
+
+.header .header-container .navigation ul li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 800;
+  transition: all 0.3s ease-in;
+}
+
+.header .header-container .navigation ul li:hover a {
+  color: var(--normal-orange);
+}
+
+.header .shopping-cart-counter {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  top: -8px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.main-content {
+  padding: 50px 20px;
+}
+
+.footer .content {
+  padding: 50px 20px;
+}
+
+.footer .links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer .links .links-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: color 0.3s ease-in;
+}
+
+.footer .links .links-column a {
+  margin-bottom: 8px;
+  color: var(--dark-blue);
+}
+
+.footer .terms-links a:hover,
+.footer .links .links-column a:hover {
+  color: var(--normal-green);
+}
+
+.footer .links .logo-and-stuff {
+  padding-right: 50px;
+}
+
+.footer .links .logo-and-stuff img {
+  width: 108px;
+}
+
+.footer .links .logo-and-stuff .socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer .links .logo-and-stuff .socials svg {
+  width: 24px;
+  height: 24px;
+}
+
+.footer .links .logo-and-stuff .socials svg path {
+  fill: var(--black);
+  transition: all 0.3s ease-in;
+}
+
+.footer .links .logo-and-stuff .socials svg:hover path {
+  fill: var(--hover-blue);
+}
+
+.footer .terms-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+  margin-top: 50px;
+}
+
+.footer .terms-links .copyright,
+.footer .terms-links a {
+  color: var(--transparent-gray);
+}
+
+.footer .terms-links a:first-of-type {
+  margin-left: auto;
+}

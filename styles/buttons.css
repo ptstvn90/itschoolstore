@@ -1,0 +1,49 @@
+.btn {
+  padding: 12px 32px;
+  background-color: var(--normal-gray);
+  border-radius: 24px;
+  font-size: 16px;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn.btn-primary {
+  background-color: var(--button-blue);
+}
+
+.btn.btn-success {
+  background-color: var(--normal-green);
+}
+
+.btn.btn-transparent {
+  background-color: var(--transparent);
+  color: var(--normal-green);
+  border: 1px solid var(--normal-green);
+}
+
+.btn.btn-white {
+  background-color: var(--white);
+  color: var(--normal-green);
+}
+
+.btn.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  padding: 8px 16px;
+}
+
+.btn.btn-transparent:hover {
+  background-color: var(--normal-green);
+  color: var(--white);
+}
